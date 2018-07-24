@@ -1,5 +1,5 @@
 import unittest
-from ..lib import day_two as day
+from ..lib import day_2 as day
 
 class DayTwoTests(unittest.TestCase):
     

@@ -1,7 +1,9 @@
 __all__ = [
-    "day_one",
-    "day_two"
+    "day_1",
+    "day_2",
+    "day_3"
 ] # important for "*": example: from another_mod import *
 
-from .day_one import *
-from .day_two import *
+from .day_1 import *
+from .day_2 import *
+from .day_3 import *
