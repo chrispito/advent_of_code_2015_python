@@ -1,6 +1,3 @@
-def hello_world():
-    return "hello world"
-
 def move(steps):
     steps_list = list(steps)
     iterator = 0

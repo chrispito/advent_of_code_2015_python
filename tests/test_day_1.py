@@ -3,9 +3,6 @@ from ..lib import day_one as day
 
 class DayOneTests(unittest.TestCase):
     
-    def test_hello_world(self):
-        self.assertEqual(day.hello_world(), 'hello world')
-
     def test_move_1(self):
         steps_1 = "(())"
         steps_2 = "()()"
