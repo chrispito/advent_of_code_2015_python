@@ -1,6 +1,6 @@
 import sys
 from os import path
-from lib import day_1, day_2, day_3
+from lib import day_1, day_2, day_3, day_4
 
 basepath = path.dirname(__file__)
 
@@ -35,6 +35,12 @@ def run_project(args):
             min_home_count_2 += day_3.min_home_count_2(line)
     print("total house = ", min_home_count)
     print("total min_home_count_2 = ", min_home_count_2)
+
+    print('Run: ------- Day 4 -------')
+    result = day_4.hash_check("bgvyzdsv")
+    print("md5 [5] Zeros = ", result)
+    result = day_4.hash_check_2("bgvyzdsv")
+    print("md5 [6] Zeros = ", result)
 
 if __name__ == '__main__':
     run_project(sys.argv)
