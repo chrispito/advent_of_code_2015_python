@@ -1,6 +1,6 @@
 import sys
 from os import path
-from lib import day_1, day_2, day_3, day_4
+from lib import day_1, day_2, day_3, day_4, day_5
 
 basepath = path.dirname(__file__)
 
@@ -42,5 +42,18 @@ def run_project(args):
     result = day_4.hash_check_2("bgvyzdsv")
     print("md5 [6] Zeros = ", result)
 
+    print('Run: ------- Day 5 -------')
+    filepath = path.abspath(path.join(basepath,"lib/puzzel/day_5.txt"))
+    with open(filepath, "r") as file:
+        nice_string_count = 0
+        nice_string_count_new = 0
+        for line in file:
+            if day_5.nice_string_check(line):
+                nice_string_count += 1
+            if day_5.nice_string_check_new(line):
+                nice_string_count_new += 1
+        
+    print("total nice string = ", nice_string_count)
+    print("total nice string [New] = ", nice_string_count_new)
 if __name__ == '__main__':
     run_project(sys.argv)
