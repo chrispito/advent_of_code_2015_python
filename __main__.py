@@ -1,6 +1,6 @@
 import sys
 from os import path
-from lib import day_1, day_2, day_3, day_4, day_5, day_6
+from lib import day_1, day_2, day_3, day_4, day_5, day_6, day_7
 import plotly
 import plotly.graph_objs as go
 
@@ -81,21 +81,32 @@ def run_project(args):
     print("total nice string = ", nice_string_count)
     print("total nice string [New] = ", nice_string_count_new)
 
-    print('Run: ------- Day 6 -------')
-    filepath = path.abspath(path.join(basepath,"lib/puzzel/day_6.txt"))
-    lights_count = 0
-    brightness_count = 0
+    # print('Run: ------- Day 6 -------')
+    # filepath = path.abspath(path.join(basepath,"lib/puzzel/day_6.txt"))
+    # lights_count = 0
+    # brightness_count = 0
+    # with open(filepath, "r") as file:
+    #     puzzel = day_6.get_puzzel(1000)
+    #     for line in file:
+    #         puzzel = day_6.lights_count_p(line, puzzel)
+
+    #     lights_count  = day_6.count_lighted(puzzel)
+    #     brightness_count  = day_6.count_brightness(puzzel)
+    #     # plot_data(puzzel)
+
+    # print("total lights = ", lights_count)
+    # print("total brightness = ", brightness_count)
+
+    print('Run: ------- Day 7 -------')
+    filepath = path.abspath(path.join(basepath,"lib/puzzel/day_7.txt"))
+    data = []
     with open(filepath, "r") as file:
-        puzzel = day_6.get_puzzel(1000)
         for line in file:
-            puzzel = day_6.lights_count_p(line, puzzel)
+            data.append(line.strip())
+    print(len(data))
+    dictionary = day_7.binary_operator(data)
 
-        lights_count  = day_6.count_lighted(puzzel)
-        brightness_count  = day_6.count_brightness(puzzel)
-        # plot_data(puzzel)
-
-    print("total lights = ", lights_count)
-    print("total brightness = ", brightness_count)
+    print("value of a = ", dictionary["a"])
 
 
 if __name__ == '__main__':

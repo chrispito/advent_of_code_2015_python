@@ -1,7 +1,7 @@
 import unittest
 from ..lib import day_3 as day
 
-class DayTwoTests(unittest.TestCase):
+class DayThreeTests(unittest.TestCase):
     
     def test_min_home_1(self):
         data = ">"

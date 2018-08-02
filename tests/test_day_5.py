@@ -1,7 +1,7 @@
 import unittest
 from ..lib import day_5 as day
 
-class DayTwoTests(unittest.TestCase):
+class DayFiveTests(unittest.TestCase):
     
     def test_check_first_condition_False(self):
         data = "abcdef"

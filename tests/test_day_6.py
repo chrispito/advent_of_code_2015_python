@@ -1,7 +1,7 @@
 import unittest
 from ..lib import day_6 as day
 
-class DayTwoTests(unittest.TestCase):
+class DaySixTests(unittest.TestCase):
     
     def test_get_coordinate(self):
         data = "0,0 through 999,999"
