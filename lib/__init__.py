@@ -5,6 +5,7 @@ __all__ = [
     "day_4",
     "day_5",
     "day_6",
+    "day_8",
     "day_7"
 ] # important for "*": example: from another_mod import *
 
@@ -15,3 +16,4 @@ from .day_4 import *
 from .day_5 import *
 from .day_6 import *
 from .day_7 import *
+from .day_8 import *

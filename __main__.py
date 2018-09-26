@@ -1,6 +1,6 @@
 import sys
 from os import path
-from lib import day_1, day_2, day_3, day_4, day_5, day_6, day_7
+from lib import day_1, day_2, day_3, day_4, day_5, day_6, day_7, day_8
 import plotly
 import plotly.graph_objs as go
 
@@ -107,6 +107,23 @@ def run_project(args):
     dictionary = day_7.binary_operator(data)
 
     print("value of a = ", dictionary["a"])
+
+    print('Run: ------- Day 8 -------')
+    filepath = path.abspath(path.join(basepath,"lib/puzzel/day_8.txt"))
+    data = {"a": 0, "b": 0, "c": 0, "d": 0}
+    with open(filepath, "r") as file:
+        counter = 0
+        for line in file:
+            line = line.strip()
+            (a, b) = day_8.string_count(line)
+            data["a"] = data["a"] + a
+            data["b"] = data["b"] + b
+            (c, d) = day_8.string_encode_count(line)
+            data["c"] = data["c"] + c
+            data["d"] = data["d"] + d
+
+    print("value of data: {0}, diff: {1} ".format(data, data["b"] - data["a"]))
+    print("value of data: {0}, diff: {1} ".format(data, data["c"] - data["d"]))
 
 
 if __name__ == '__main__':
